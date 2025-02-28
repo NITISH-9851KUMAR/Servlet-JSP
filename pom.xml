@@ -5,7 +5,7 @@
   <artifactId>Servlet-JSP</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Servlet-JSP Maven Webapp</name>
+  <name>servlet_Program-JSP Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
@@ -28,6 +28,6 @@
 
 
   <build>
-    <finalName>Servlet-JSP</finalName>
+    <finalName>servlet_Program-JSP</finalName>
   </build>
 </project>
