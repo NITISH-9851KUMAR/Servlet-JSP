@@ -28,10 +28,11 @@
       <!--    dependency for oracle database -->
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
-      <artifactId>ojdbc8</artifactId>
-      <version>19.8.0.0</version>
+      <artifactId>ojdbc6</artifactId>
+      <version>11.2.0.4</version>
       <scope>provided</scope>
     </dependency>
+
 
   </dependencies>
   <build>
