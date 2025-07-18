@@ -40,7 +40,7 @@ public class ServletInterface implements Servlet{
         response.setContentType("text/html");
         PrintWriter out= response.getWriter();
         out.println("<a>Created Servlet Using Servlet Interface</a> <br> ");
-        out.println("<a>Date: "+new Date().toString().toString());
+        out.println("<a>Date: "+new Date()+"</a>");
     }
 
     // Life cycle Method
@@ -50,7 +50,7 @@ public class ServletInterface implements Servlet{
 
     //Non Life cycle Method
     public ServletConfig getServletConfig(){
-        return config;
+        return this.config;
     }
 
     //Non Life cycle Method
