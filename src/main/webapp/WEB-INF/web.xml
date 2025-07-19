@@ -4,17 +4,49 @@
 
 <web-app>
 
-<!--servlet-Declaration-->
+    <!-- Servlet Declaration -->
 
-  <servlet>
-    <servlet-name>first</servlet-name>
-    <servlet-class>BasicsServlet.ServletInterface</servlet-class>
-  </servlet>
+    <servlet>
+        <servlet-name>servlet-interface</servlet-name>
+        <servlet-class>BasicsServlet.ServletInterface</servlet-class>
+    </servlet>
 
-<!--  servlet  mapping-->
-  <servlet-mapping>
-    <servlet-name>first</servlet-name>
-    <url-pattern>/servlet-interface</url-pattern>
-  </servlet-mapping>
-  <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>generic-servlet</servlet-name>
+        <servlet-class>BasicsServlet.GenericServletClass</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Http-Servlet</servlet-name>
+        <servlet-class>BasicsServlet.HttpServletClass</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Basics Servlet</servlet-name>
+        <servlet-class>BasicsServlet.Basics</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+
+    <servlet-mapping>
+        <servlet-name>servlet-interface</servlet-name>
+        <url-pattern>/servletInterface</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>generic-servlet</servlet-name>
+        <url-pattern>/genericServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Http-Servlet</servlet-name>
+        <url-pattern>/httpServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Basics Servlet</servlet-name>
+        <url-pattern>/basicsServlet</url-pattern>
+    </servlet-mapping>
+
+    <display-name>Archetype Created Web Application</display-name>
 </web-app>
