@@ -9,25 +9,25 @@
  * */
 package BasicsServlet;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = "/HttpServlet-Class")
-public class HttpServletClass extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+public class HttpServletClass extends HttpServlet{
 
-        response.setContentType("text/html");
-        PrintWriter out= response.getWriter();
+	public void doGet(HttpServletRequest req, HttpServletResponse res)
+		throws ServletException, IOException{
+		
+		res.setContentType("text/html");
+		PrintWriter out= res.getWriter();
 
-        out.println("<a>HttpServlet Class</a>");
+		out.println("<h1> Http Servlet</h1>");
 
-    }
+	}
+
 }
 
