@@ -12,12 +12,10 @@ import javax.servlet.ServletResponse;
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-@WebServlet("/Servlet-Interface")
 public class ServletInterface implements Servlet{
 
     //Life cycle method
@@ -39,7 +37,7 @@ public class ServletInterface implements Servlet{
         //set Content type
         response.setContentType("text/html");
         PrintWriter out= response.getWriter();
-        out.println("<a>Created Servlet Using Servlet Interface</a> <br> ");
+        out.println("<a>Servlet Interface</a> <br> ");
         out.println("<a>Date: "+new Date()+"</a>");
     }
 
