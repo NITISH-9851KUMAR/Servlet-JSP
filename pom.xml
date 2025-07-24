@@ -17,6 +17,7 @@
         </dependency>
 
         <!-- dependency for java servlet Program  -->
+        <!-- It Supports javax.servlet-api Older Version -->
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -24,6 +25,16 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+        <!-- It Supports javax.servlet-api Older Version -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>  <!-- or newer if available -->
+            <scope>provided</scope>
+        </dependency>
+
 
         <!-- Dependency for oracle database -->
         <dependency>
