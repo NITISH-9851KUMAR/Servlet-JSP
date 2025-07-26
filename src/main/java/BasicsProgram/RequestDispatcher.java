@@ -30,10 +30,6 @@ public class RequestDispatcher extends HttpServlet {
             rd.include(request, response);
 
         } else {
-            out.println("<h3>" + name + "</h3>");
-            out.println("<h3>" + pass + "</h3>");
-            out.println("<h3>" + email + "</h3>");
-
             // Request Dispatcher Object Forward Method
             javax.servlet.RequestDispatcher rd= request.getRequestDispatcher("request-disp-include.html");
             rd.forward(request, response);
