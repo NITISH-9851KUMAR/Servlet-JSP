@@ -1,5 +1,6 @@
 package BasicsProgram;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,16 +10,13 @@ import java.io.PrintWriter;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet("/request-dispatcher")
-public class RequestDispatcher extends HttpServlet {
+public class RequestDisp extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String name = request.getParameter("name");
-        String pass = request.getParameter("pass");
-        String email = request.getParameter("email");
         String term = request.getParameter("condition");
 
 
@@ -31,7 +29,7 @@ public class RequestDispatcher extends HttpServlet {
 
         } else {
             // Request Dispatcher Object Forward Method
-            javax.servlet.RequestDispatcher rd= request.getRequestDispatcher("request-disp-include.html");
+            RequestDispatcher rd= request.getRequestDispatcher("request-disp-include.html");
             rd.forward(request, response);
 
         }
