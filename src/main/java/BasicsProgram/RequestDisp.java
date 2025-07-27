@@ -24,7 +24,7 @@ public class RequestDisp extends HttpServlet {
             out.println("We have not accepted terms and condition");
 
             // Request Dispatcher Object include method
-            javax.servlet.RequestDispatcher rd= request.getRequestDispatcher("request-disp.html");
+            RequestDispatcher rd= request.getRequestDispatcher("request-disp.html");
             rd.include(request, response);
 
         } else {
