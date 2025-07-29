@@ -22,23 +22,18 @@ public class HttpSessions extends HttpServlet{
         String userName= request.getParameter("user_name");
         String password= request.getParameter("pass");
 
+        HttpSession session= request.getSession();
+        session.setAttribute("user_name", userName);
+
         if(userName.equals("nitish") && password.equals("1234")){
 
-            //if use setAttribute then its value limite only one page to its next page
-            // After next page we can not use this value
-//            request.setAttribute("user_name", userName);
-
-            // Instead of This we use HttpSession
-            HttpSession session= request.getSession();
-            session.setAttribute("user_name", userName);
-
-            RequestDispatcher rd= request.getRequestDispatcher("send-redirect-welcome.jsp");
+            RequestDispatcher rd= request.getRequestDispatcher("http-session-home.jsp");
             rd.forward(request, response);
+
         }else{
-            out.println("Invalid User Name and Password");
+            out.println("<h3>Invalid User Name and password");
             RequestDispatcher rd= request.getRequestDispatcher("http-session.html");
             rd.include(request, response);
-
         }
 
     }

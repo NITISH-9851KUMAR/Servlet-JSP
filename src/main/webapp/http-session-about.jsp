@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Send Redirect: Session Tracking</title>
+    <title>HttpSession: Session Tracking</title>
 </head>
 <body>
 
@@ -19,9 +19,8 @@
 <div style= "text-align: center">
     <h3>Session Tracking: HttpSession</h3>
     <h3>Welcome: <%= userName%></h3>
-    <a href="send-redirect-profile.jsp">Profile</a>
-    <a href="logout">Logout</a>
-
+    <a href="http-session-home.jsp">Profile Page </a>&nbsp
+    <a href="http-session-home.jsp">Home Page</a>&nbsp
 </div>
 
 </body>
