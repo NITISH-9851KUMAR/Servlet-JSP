@@ -10,11 +10,15 @@
 <body>
 
 <h3>Taglib Directive Tag</h3>
-<c:set var="name" value="TCS Informatin & Technology"></c:set>
+<%--For set value --%>
+<c:set var="name" value="Tata Conseltancy Company"></c:set>
+
+<%--For Print Value--%>
 <c:out value="${name}"></c:out>
-<c:if test="${10>2}">
-    <h3>This is true block 10>2</h3>
-</c:if>
+
+<%--If Block for test Condition --%>
+<c:if test="${3>2}">True Block is executed</c:if>
+<c:if test="${2>3}">False Block Is Executed</c:if>
 
 
 </body>
