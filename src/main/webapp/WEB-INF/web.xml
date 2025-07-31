@@ -49,4 +49,10 @@
     </servlet-mapping>
 
     <display-name>Archetype Created Web Application</display-name>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/jsp-expHandling-pro4.jsp</location>
+    </error-page>
+
 </web-app>
