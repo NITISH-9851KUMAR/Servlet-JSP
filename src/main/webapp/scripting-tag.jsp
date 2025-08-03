@@ -22,19 +22,15 @@
 <%
     Random rm= new Random();
     int randomNumber= rm.nextInt(100);
+    out.println("Using Scriptlet Tag: "+randomNumber);
 %>
 
 <%--Expression Tag to show the Value --%>
-<p>Random Value: <%= randomNumber %></p>
+<p>Random Value using Expression Tag: <%= randomNumber %></p>
 <p>Sum of <%=a%> and <%=b%> : <%=sum()%></p>
 
-<%
-    for(int i= 1; i<5; i++){
-%>
-<p>Random number: <%=randomNumber+i%></p>
-<%
-    }
-%>
+<p>Random number: <%=randomNumber%></p>
+
 
 </body>
 </html>
