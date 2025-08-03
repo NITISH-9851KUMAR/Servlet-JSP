@@ -8,8 +8,11 @@
 <body>
 
 <h2>Hello Everyone</h2>
-<%--<t:mytag></t:mytag> <!-- mytag name is present in mytag.tld file which is in WEB-INF foloder -->--%>
-<t:printTable number="30" color="red"></t:printTable>
-<t:printTable number="40" color="brown"></t:printTable>
+<h2>This is Tag Custom Tag JSP Folder</h2>
+
+<t:BasicTagHandler></t:BasicTagHandler>
+<t:printTable number="3" color="green"></t:printTable>
+<t:printTable number="10" color="salmon"></t:printTable>
+
 </body>
 </html>
