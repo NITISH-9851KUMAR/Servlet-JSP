@@ -9,6 +9,14 @@ public class PrintTableTag extends TagSupport {
     int number; // This value fetch by tld Folder which is set by .jsp file
     String color; // It has also same as above attribute
 
+    public void setNumber(int n){
+        this.number= n;
+    }
+
+    public void setColor(String color){
+        this.color= color;
+    }
+
     public int doStartTag() throws JspException {
         JspWriter out= pageContext.getOut();
 
