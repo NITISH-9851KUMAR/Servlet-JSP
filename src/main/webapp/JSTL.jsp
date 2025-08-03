@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+
+<!-- Directive Tag -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--if write c in prefix then use c entire program in JSTL--%>
 
@@ -9,7 +11,7 @@
 
 <body>
 
-<h3>Taglib Directive Tag</h3>
+<h3>JSP Standard Tag Library</h3>
 <%--For set value --%>
 <c:set var="name" value="Tata Conseltancy Company"></c:set>
 
