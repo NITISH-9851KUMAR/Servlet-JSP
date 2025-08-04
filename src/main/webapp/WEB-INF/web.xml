@@ -55,4 +55,25 @@
         <location>/jsp-expHandling-pro4.jsp</location>
     </error-page>
 
+<!--    session configuration-->
+    <session-config>
+
+    </session-config>
+
+<!--    filter configuration-->
+
+    <!--        filter Declaration-->
+    <filter>
+        <filter-name>filter1</filter-name>
+        <filter-class>filter.FilterClass</filter-class>
+    </filter>
+
+    <!--        filter mapping-->
+
+    <filter-mapping>
+        <filter-name>filter1</filter-name>
+        <url-pattern>/profile-servlet</url-pattern>
+        <url-pattern>/order-servlet</url-pattern>
+    </filter-mapping>
+
 </web-app>
