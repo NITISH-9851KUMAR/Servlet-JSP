@@ -60,18 +60,14 @@
 
     </session-config>
 
-<!--    filter configuration-->
-
-    <!--        filter Declaration-->
+    filter configuration
     <filter>
-        <filter-name>filter1</filter-name>
+        <filter-name>filter-first</filter-name>
         <filter-class>filter.FilterClass</filter-class>
     </filter>
 
-    <!--        filter mapping-->
-
     <filter-mapping>
-        <filter-name>filter1</filter-name>
+        <filter-name>filter-first</filter-name>
         <url-pattern>/profile-servlet</url-pattern>
         <url-pattern>/order-servlet</url-pattern>
     </filter-mapping>
