@@ -26,6 +26,12 @@
         <servlet-class>BasicsServlet.Basics</servlet-class>
     </servlet>
 
+<!--    Remove .jsp extension from jsp file-->
+    <servlet>
+        <servlet-name>jspExtension</servlet-name>
+        <jsp-file>/remove-jsp-extension.jsp</jsp-file>
+    </servlet>
+
     <!-- Servlet Mapping -->
 
     <servlet-mapping>
@@ -48,6 +54,12 @@
         <url-pattern>/basicsServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>jspExtension</servlet-name>
+        <url-pattern>/remove-jsp-extension</url-pattern>
+        <url-pattern>/removeJsp</url-pattern>
+    </servlet-mapping>
+
     <display-name>Archetype Created Web Application</display-name>
 
     <error-page> <!-- Error Page show, when user try to open un declare url -->
@@ -60,7 +72,7 @@
 
     </session-config>
 
-    filter configuration
+<!--    filter configuration-->
     <filter>
         <filter-name>filter-first</filter-name>
         <filter-class>filter.FilterClass</filter-class>
