@@ -1,9 +1,10 @@
-package BasicsProgram;
+package servlet;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,7 +13,7 @@ import java.sql.PreparedStatement;
 
 @WebServlet("/photo-upload")
 @MultipartConfig(maxFileSize = 1024 * 1024 * 10) // 10mb maximum It handles different type of data
-public class PhotoStore extends HttpServlet {
+public class PhotoStore extends HttpServlet implements JdbcConnection {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -26,24 +27,18 @@ public class PhotoStore extends HttpServlet {
         // Save file to Local Folder
         String uploadPath = getServletContext().getRealPath("/image");
         File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists()) // if File exists then make it directory
+        if (!uploadDir.exists()) // if File doesn't exist then make it directory
             uploadDir.mkdirs();
 
         photoPart.write(uploadPath + File.separator + fileName);
         // It save photo in the folder
 
         //--------SAVE FILE NAME INTO DATABASE as String --------
-        Connection con = null;
-        PreparedStatement pst = null;
+        Connection con;
+        PreparedStatement pst;
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/servlet",
-                    "root",
-                    "Nitish@04"
-            );
+            con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
             String sql = "INSERT INTO photos (name, photo) VALUES (?, ?)";
             pst = con.prepareStatement(sql);

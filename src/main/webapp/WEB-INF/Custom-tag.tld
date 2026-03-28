@@ -11,13 +11,13 @@
 
     <tag>
         <name>BasicTagHandler</name>
-        <tag-class>JSP_Program.TagHandler</tag-class>
+        <tag-class>servlet.TagHandler</tag-class>
         <body-content>empty</body-content>
     </tag>
 
     <tag>
         <name>printTable</name>
-        <tag-class>JSP_Program.PrintTableTag</tag-class>
+        <tag-class>servlet.PrintTableTag</tag-class>
         <body-content>empty</body-content>
 
         <attribute>

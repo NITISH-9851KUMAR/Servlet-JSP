@@ -1,10 +1,10 @@
-package BasicsProgram.session_tracking;
+package session_tracking;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -23,8 +23,6 @@ public class URLRewriting1 extends HttpServlet {
         // URL Rewriting
         // add user_name value with url , actually it is url rewriting
         out.println("<h3><a href= 'url-rewriting2?user_name= "+name+" ' >Servlet 2</a></h3>");
-
-
     }
 
 }
